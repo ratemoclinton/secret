@@ -5,12 +5,12 @@
     public static $e;
     public static $database;
     public static $DIR = "/ratemo/stomigram";
-    public static $GMAIL = "YOUR_GMAIL";
-    public static $GMAIL_PASSWORD = "GMAIL_PASSWORD";
+    public static $GMAIL = "clintonbrucy@gmail.com";
+    public static $GMAIL_PASSWORD = "clintonhot";
 
     public static function _DB(){
       try {
-        self::$database = new PDO('mysql:host=127.0.0.1;dbname=stomigram;charset=utf8mb4', 'root', 'admin2222');
+        self::$database = new PDO('postgres:host=ec2-54-221-243-211.compute-1.amazonaws.com;dbname=dfqagcdd4dv2pf;charset=utf8mb4', 'wbyegwoztbkvss', '6a5f10056a115c200837e736a123b49f960791907a66b6473c4cb80fc2ff771d');
         self::$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $e = self::$e;
       } catch (PDOException $e) {
